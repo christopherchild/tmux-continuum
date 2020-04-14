@@ -6,7 +6,6 @@ source "$CURRENT_DIR/helpers.sh"
 source "$CURRENT_DIR/variables.sh"
 
 print_status() {
-	local save_int="$(get_tmux_option "$auto_save_interval_option")"
 	local last_save_stamp="$(get_tmux_option $last_auto_save_option )"
 	local current_stamp="$( date +%s )"
 	local duration="$( bc <<< "$current_stamp - $last_save_stamp")"
