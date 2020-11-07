@@ -16,6 +16,6 @@ print_countdown() {
 	local interval_seconds="$((interval_minutes * 60))"
 	local current_timestamp="$(current_timestamp)"
 	local next_run="$((last_saved_timestamp + $interval_seconds))"
-	echo $((($next_run - $current_timestamp) / 60))
+	echo $((($next_run - $current_timestamp)))
 }
 print_countdown
